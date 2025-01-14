@@ -2,6 +2,7 @@ PYTHON-HELLO, WORD
 
 This project is an introduction to the fundamentals of Python, covering the use of the Python interpreter, printing text and variables, string manipulation, indexing and slicing, and adhering to the official Python coding style.
 
+
 LEARNING OBJECTIVES
 
 By the end of this project, you should be able to explain without Google's help:
@@ -15,6 +16,7 @@ How to work with strings in Python
 What indexing and slicing are in Python
 
 The official Python coding style and how to check your code with pycodestyle
+
 
 REQUIREMENTS
 
@@ -38,6 +40,7 @@ All your files must be executable
 
 The length of your files will be tested using wc
 
+
 RESOURCES
 
 Learn to Program Playlist
@@ -51,6 +54,7 @@ An Informal Introduction to Python (up to "3.1.2. Strings" included)
 How To Use String Formatters in Python 3
 
 Pycodestyle – Style Guide for Python Code
+
 
 AUTHOR
 
