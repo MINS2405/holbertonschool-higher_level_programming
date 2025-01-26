@@ -1,0 +1,43 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test basique
+>>> text_indentation("Hello. World? Yes: No.")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+Yes:
+<BLANKLINE>
+No.
+<BLANKLINE>
+
+# Test avec des espaces supplémentaires
+>>> text_indentation("   Spaces.   Are removed.   ")
+Spaces.
+<BLANKLINE>
+Are removed.
+<BLANKLINE>
+
+# Test avec un texte sans ponctuation spéciale
+>>> text_indentation("No special punctuation here")
+No special punctuation here
+
+# Test avec une chaîne vide
+>>> text_indentation("")
+
+# Test avec des ponctuations consécutives
+>>> text_indentation("Hello..? World:")
+Hello.
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+World:
+<BLANKLINE>
+
+# Test avec un type non-string
+>>> text_indentation(12345)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
