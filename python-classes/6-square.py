@@ -1,27 +1,36 @@
 #!/usr/bin/python3
-"""Module defining a Square class."""
+"""Module for Square class"""
 
 
 class Square:
-    """Represents a square with size and position."""
+    """A class that defines a square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize a new square.
+        """Initialize the square
 
         Args:
-            size (int): The size of the square. Defaults to 0.
-            position (tuple): The position of the square. Defaults to (0, 0).
+            size (int): The size of the square
+            position (tuple): The position of the square
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Get or set the current size of the square."""
+        """Retrieve the size of the square"""
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Set the size of the square
+
+        Args:
+            value (int): The size to set
+
+        Raises:
+            TypeError: If value is not an integer
+            ValueError: If value is less than 0
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -30,11 +39,19 @@ class Square:
 
     @property
     def position(self):
-        """Get or set the current position of the square."""
+        """Retrieve the position of the square"""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """Set the position of the square
+
+        Args:
+            value (tuple): The position to set
+
+        Raises:
+            TypeError: If value is not a tuple of 2 positive integers
+        """
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
@@ -43,5 +60,21 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Calculate the current square area."""
-        return self.
+        """Calculate the area of the square
+
+        Returns:
+            int: The area of the square
+        """
+        return self.__size ** 2
+
+    def my_print(self):
+        """Print the square with the # character"""
+        if self.__size == 0:
+            print("")
+            return
+
+        [print("") for i in range(self.__position[1])]
+        for i in range(self.__size):
+            [print(" ", end="") for j in range(self.__position[0])]
+            [print("#", end="") for k in range(self.__size)]
+            print("")
