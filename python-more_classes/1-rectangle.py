@@ -1,70 +1,37 @@
 #!/usr/bin/python3
+"""Defines a class Rectangle with private attributes width and height."""
+
 
 class Rectangle:
-    """
-    This class defines a rectangle with a width and a height.
-    """
+    """A class that defines a rectangle by its width and height."""
 
     def __init__(self, width=0, height=0):
-        """
-        Initializes a new Rectangle.
-
-        Args:
-            width (int): The width of the rectangle. Defaults to 0.
-            height (int): The height of the rectangle. Defaults to 0.
-        """
+        """Initializes Rectangle instance with optional width and height."""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """
-        Getter for the width of the rectangle.
-
-        Returns:
-            int: The width of the rectangle.
-        """
+        """Retrieves the width of the Rectangle."""
         return self.__width
+
+    @property
+    def height(self):
+        """Retrieves the height of the Rectangle."""
+        return self.__height
 
     @width.setter
     def width(self, value):
-
-        """
-        Setter for the width of the rectangle.
-        Args:
-            value (int): The new width.
-
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is negative.
-        """
+        """Sets the width of the Rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @property
-    def height(self):
-        """
-        Getter for the height of the rectangle.
-        Returns:
-            int: The height of the rectangle.
-        """
-        return self.__height
-
     @height.setter
     def height(self, value):
-        """
-        Setter for the height of the rectangle.
-
-        Args:
-            value (int): The new height.
-
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is negative.
-        """
+        """Sets the height of the Rectangle."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
