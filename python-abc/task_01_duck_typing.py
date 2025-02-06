@@ -3,6 +3,8 @@
 from abc import ABC, abstractmethod
 import math
 
+# Abstract base class
+
 
 class Shape(ABC):
     @abstractmethod
@@ -14,6 +16,7 @@ class Shape(ABC):
         pass
 
 
+# Concrete class Circle
 class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
@@ -25,6 +28,7 @@ class Circle(Shape):
         return 2 * math.pi * self.radius
 
 
+# Concrete class Rectangle
 class Rectangle(Shape):
     def __init__(self, width, height):
         self.width = width
@@ -37,17 +41,7 @@ class Rectangle(Shape):
         return 2 * (self.width + self.height)
 
 
+# Function using duck typing
 def shape_info(shape):
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
-
-# Ajout d'un test pour vérifier que la fonction fonctionne correctement
-
-
-if __name__ == "__main__":
-    circle = Circle(5)
-    rectangle = Rectangle(4, 7)
-
-
-shape_info(circle)
-shape_info(rectangle)
