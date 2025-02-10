@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+'''
+12-pascal_triangle.py
+'''
+import json
+
+
 def pascal_triangle(n):
     """
     Generates Pascal's Triangle up to the nth row.
