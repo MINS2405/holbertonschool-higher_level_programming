@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-'''
-task_05_basic_security
-'''
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import (

@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-'''
-task_02_requests
-'''
-
 import requests
 import csv
 
