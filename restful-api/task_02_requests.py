@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+'''Model of request'''
+
 import requests
 import csv
 
