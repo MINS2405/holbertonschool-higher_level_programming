@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-print(",".join("{:02d}".format(i) for i in range(100)
-               if i % 10 > i // 10), end=", ")
-print(str(i))
-print("99")
+for i in range(10):
+    for j in range(i + 1, 10):
+        if i == 8 and j == 9:
+            print("{}{}".format(i, j))
+        else:
+            print("{}{}".format(i, j), end=", ")
