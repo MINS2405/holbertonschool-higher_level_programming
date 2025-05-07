@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print ("abcdefghijklmnopqrstuvwxyz", end="")
+print (alphabet := "abcdefghijklmnopqrstuvwxyz")
+for letter in alphabet:
+    print(letter, end="")
+print()
