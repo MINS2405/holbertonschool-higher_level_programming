@@ -1,5 +1,2 @@
 #!/usr/bin/python3
-print (alphabet := "abcdefghijklmnopqrstuvwxyz")
-for letter in alphabet:
-    print(letter, end="")
-print()
+print("".join([chr(i) for i in range(97, 123)]), end="")
