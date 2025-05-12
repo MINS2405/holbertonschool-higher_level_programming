@@ -7,8 +7,7 @@ def print_reversed_list_integer(my_list=[]):
     else:
         print("None")
 
+
 if __name__ == "__main__":
     my_list = [5, 4, 3, 2, 1]
-    print_reversed_list_integer(my_list)
-    my_list = None
     print_reversed_list_integer(my_list)
