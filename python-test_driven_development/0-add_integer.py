@@ -12,6 +12,7 @@ casts floats to integers, and raises a TypeError
 if the inputs are not valid.
 """
 
+
 def add_integer(a, b=98):
     """Adds two integers.
 
