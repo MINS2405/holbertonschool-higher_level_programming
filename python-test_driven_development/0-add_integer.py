@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# This module defines a function that adds two integers.
+# The function performs type checking to ensure inputs are valid.
+# It raises a TypeError if either input is not an integer or float.
+# If the inputs are floats, they are cast to integers before addition.
+# The function returns the sum of the two integers.
 """
 This module provides a function to add two numbers.
 
