@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+
+# This function prints a square of '#' characters with the given size.
+# It checks that size is an integer and greater than or equal to 0.
+# If not, it raises a TypeError or ValueError with an appropriate message.
+
+
 def print_square(size):
     """Prints a square with the character #.
 
