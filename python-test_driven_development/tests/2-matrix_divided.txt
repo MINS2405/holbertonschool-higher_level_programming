@@ -42,7 +42,6 @@ Traceback (most recent call last):
     ...
 OverflowError: cannot convert float infinity to integer
 
->>> import math
 >>> matrix = [[1, 2], [float('nan'), 4]]
 >>> matrix_divided(matrix, 2)
 Traceback (most recent call last):
