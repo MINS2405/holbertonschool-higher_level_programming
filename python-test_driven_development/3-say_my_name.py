@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+
+# This function prints "My name is <first name> <last name>"
+# It checks that both first_name and last_name are strings.
+# If not, it raises a TypeError with an appropriate message.
+
+
 def say_my_name(first_name, last_name=""):
     """Prints "My name is <first name> <last name>"
 
