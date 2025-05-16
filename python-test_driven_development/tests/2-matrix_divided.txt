@@ -1,54 +1,60 @@
-#!/usr/bin/python3
-matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-# Test 1: Normal case
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
-# Test 2: Division by a float
-matrix2 = [
-    [9, 12, 15],
-    [18, 21, 24]
-]
-print(matrix_divided(matrix2, 4.5))
+>>> matrix
+[[1, 2, 3], [4, 5, 6]]
 
-# Test 3: Error if div = 0
-try:
-    print(matrix_divided(matrix, 0))
-except Exception as e:
-    print(e)
+>>> matrix = [[1, 2], [3, 4]]
+>>> matrix_divided(matrix, "3")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
 
-# Test 4: Error if div is not a number
-try:
-    print(matrix_divided(matrix, "a"))
-except Exception as e:
-    print(e)
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
 
-# Test 5: Error if the matrix contains something other than int/float
-bad_matrix = [
-    [1, 2, "3"],
-    [4, 5, 6]
-]
-try:
-    print(matrix_divided(bad_matrix, 2))
-except Exception as e:
-    print(e)
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-# Test 6: Error if rows have different sizes
-bad_matrix2 = [
-    [1, 2],
-    [3, 4, 5]
-]
-try:
-    print(matrix_divided(bad_matrix2, 2))
-except Exception as e:
-    print(e)
+>>> matrix = [[1, 2], 3]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-# Test 7: Empty matrix
-print(matrix_divided([], 2))
+>>> matrix = [[1, 2], [3, 4, 5]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
 
-# Test 8: Matrix with an empty row
-print(matrix_divided([[]], 2))
+>>> matrix = [[1, 2], [float('inf'), 4]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+>>> import math
+>>> matrix = [[1, 2], [float('nan'), 4]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+>>> matrix = [[1, 2], [3, 4]]
+>>> matrix_divided(matrix, float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+>>> matrix = [[1, 2], [3, 4]]
+>>> matrix_divided(matrix, float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
