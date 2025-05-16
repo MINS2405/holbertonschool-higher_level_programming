@@ -1,0 +1,40 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. How are you? I'm fine: thanks.")
+Hello.
+
+How are you?
+
+I'm fine:
+
+thanks.
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("First. Second? Third: Fourth.")
+First.
+
+Second?
+
+Third:
+
+Fourth.
+
+>>> text_indentation("  Leading and trailing spaces.  ")
+Leading and trailing spaces.
+
+>>> text_indentation("Hello.World:Test?End")
+Hello.
+World:
+Test?
+End
+
+>>> try:
+...     text_indentation(123)
+... except Exception as e:
+...     print(e)
+text must be a string
+
+>>> text_indentation("")
+<BLANKLINE>
