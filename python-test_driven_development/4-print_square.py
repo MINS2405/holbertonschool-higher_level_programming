@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-
-# This function prints a square of '#' characters with the given size.
-# It checks that size is an integer and greater than or equal to 0.
-# If not, it raises a TypeError or ValueError with an appropriate message.
+# This module provides a function that prints a square using the '#' symbol.
+# The print_square function checks if the input size is a valid integer.
+# If the size is not an integer, a TypeError is raised with a clear message.
+# If the size is less than 0, a ValueError is raised with
+# an appropriate message.
+# The function prints a square with sides of length
+# 'size' using '#' characters.
 
 
 def print_square(size):
