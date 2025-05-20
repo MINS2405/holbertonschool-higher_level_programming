@@ -10,6 +10,7 @@ Example usage:
     s.my_print()
 """
 
+
 class Square:
     """
     Class that represents a square.
