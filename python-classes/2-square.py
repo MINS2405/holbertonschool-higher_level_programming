@@ -2,11 +2,13 @@
 """
 This module defines the Square class.
 
-The Square class allows you to create square objects with a private size attribute.
+The Square class allows you to create square objects with
+a private size attribute.
 It ensures that the size is always an integer greater than or equal to zero.
 If the size is not an integer, a TypeError is raised.
 If the size is less than zero, a ValueError is raised.
 """
+
 
 class Square:
     """
@@ -38,4 +40,3 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-    
