@@ -131,12 +131,6 @@ class Rectangle:
             result += "#" * self.__width + "\n"
         return result.rstrip()
 
-
-class Rectangle:
-    def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
-
     def __str__(self):
         """
         Return the rectangle as a string of '#' characters.
