@@ -27,6 +27,7 @@ class Rectangle:
         area(): Returns the area of the rectangle.
         perimeter(): Returns the perimeter of the rectangle.
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -38,7 +39,10 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-
+        type(self).number_of_instances += 1
+        """
+        Here, we increment by 1 and display the whole number
+        """
     @property
     def width(self):
         """
@@ -159,22 +163,7 @@ class Rectangle:
         """
         Print the message
         """
-
-
-delr2 = ("rectangle")
-'''
-Delete two instances of rectangle
-'''
-print("Bye rectangle...")
-'''
-print the message
-'''
-
-delr1 = ("rectangle")
-'''
-Delete one instance of rectangle
-'''
-print("Bye rectangle...")
-'''
-Print the message
-'''
+        type(self).number_of_instances -= 1
+        """
+        Here, we decrement by 1 and display the whole number"
+        """
