@@ -1,26 +1,31 @@
 #!/usr/bin/python3
 """
-This module defines the Rectangle class which allows you to create rectangles
-with a width and a height, and calculate their area.
-The class also validates the values given for width and height.
+This module defines the Rectangle class.
+
+The Rectangle class allows you to create rectangle
+objects with a width and a height,
+and provides methods to calculate the area and perimeter.
+It also validates that width and height are integers greater
+than or equal to zero.
 """
 
 
 class Rectangle:
     """
-    Rectangle class that represents a rectangle
-    defined by its width and height.
+    Rectangle class that represents a rectangle defined by its
+    width and height.
 
     Private attributes:
-        __width (int): width of the rectangle (must be >= 0)
-        __height (int): height of the rectangle (must be >= 0)
+        __width (int): The width of the rectangle (must be >= 0)
+        __height (int): The height of the rectangle (must be >= 0)
 
     Properties:
-        width: get or set the width, with type and value validation
-        height: get or set the height, with type and value validation
+        width: Get or set the width, with type and value validation.
+        height: Get or set the height, with type and value validation.
 
     Public methods:
-        area(): returns the area of the rectangle
+        area(): Returns the area of the rectangle.
+        perimeter(): Returns the perimeter of the rectangle.
     """
 
     def __init__(self, width=0, height=0):
@@ -36,13 +41,18 @@ class Rectangle:
 
     @property
     def width(self):
-        """Getter for the rectangle's width."""
+        """
+        Get the width of the rectangle.
+
+        Returns:
+            int: The current width of the rectangle.
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Setter for the rectangle's width, with validation.
+        Set the width of the rectangle, with validation.
 
         Args:
             value (int): The new width value.
@@ -59,13 +69,18 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter for the rectangle's height."""
+        """
+        Get the height of the rectangle.
+
+        Returns:
+            int: The current height of the rectangle.
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
         """
-        Setter for the rectangle's height, with validation.
+        Set the height of the rectangle, with validation.
 
         Args:
             value (int): The new height value.
@@ -82,9 +97,21 @@ class Rectangle:
 
     def area(self):
         """
-        Returns the area of the rectangle.
+        Calculate and return the area of the rectangle.
 
         Returns:
             int: The area (width * height).
         """
         return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Calculate and return the perimeter of the rectangle.
+
+        Returns:
+            int: The perimeter (2 * (width + height)), or 0
+            if width or height is 0.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__width + self.__height) * 2
