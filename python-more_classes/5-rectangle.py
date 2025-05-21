@@ -150,5 +150,12 @@ class Rectangle:
         using eval().
         """
         return f"Rectangle({self.__width}, {self.__height})"
+
     def __del__(self):
+        """
+        Delete a message
+        """
         print("Bye rectangle...")
+        """
+        Print the message
+        """
