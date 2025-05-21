@@ -130,12 +130,26 @@ class Rectangle:
         for _ in range(self.__height):
             result += "#" * self.__width + "\n"
         return result.rstrip()
-    """ This is just a string, not a Rectangle object """
-    mon_rectangle = "Rectangle(2, 4)"
+    class Rectangle:
+        def __init__(self, width=0, height=0):
+         self.__width = width
+         self.__height = height
 
+    def __str__(self):
+        """
+        Return the rectangle as a string of '#' characters.
+        Each line represents one row of the rectangle.
+        If width or height is 0, return an empty string.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        rectangle = ""
+        for _ in range(self.__height):
+            rectangle += "#" * self.__width + "\n"
+        return rectangle.rstrip()  # Remove the last newline for clean output
 
-""" This is not valid Python syntax and will cause an error """
-"Rectangle(2, 4)" = repr("my_rectangle")
-
-""" This will create a new Rectangle object if the class Rectangle exists """
-nouveau_rectangle = eval("Rectangle(2, 4)")
+    def __repr__(self):
+        """
+        Return a string that can recreate the same Rectangle object using eval().
+        """
+        return f"Rectangle({self.__width}, {self.__height})"
