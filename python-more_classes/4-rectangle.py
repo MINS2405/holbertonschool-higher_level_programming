@@ -147,8 +147,8 @@ class Rectangle:
             return ""
         rectangle = ""
         for _ in range(self.__height):
-            rectangle += "#" * self.__width + "\n"
-        return rectangle.rstrip()
+            rectangle += "#" * self.__width
+        return "\n" + rectangle.rstrip()
 
     def __repr__(self):
         """
