@@ -148,7 +148,7 @@ class Rectangle:
         rectangle = ""
         for _ in range(self.__height):
             rectangle += "#" * self.__width + "\n"
-        return rectangle.rstrip()  # Remove the last newline for clean output
+        return rectangle.rstrip()
 
     def __repr__(self):
         """
