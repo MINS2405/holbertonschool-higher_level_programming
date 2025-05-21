@@ -8,7 +8,8 @@ The class also validates the values given for width and height.
 
 class Rectangle:
     """
-    Rectangle class that represents a rectangle defined by its width and height.
+    Rectangle class that represents a rectangle
+    defined by its width and height.
 
     Private attributes:
         __width (int): width of the rectangle (must be >= 0)
