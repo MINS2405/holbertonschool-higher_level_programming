@@ -130,10 +130,12 @@ class Rectangle:
         for _ in range(self.__height):
             result += "#" * self.__width + "\n"
         return result.rstrip()
-    class Rectangle:
-        def __init__(self, width=0, height=0):
-         self.__width = width
-         self.__height = height
+
+
+class Rectangle:
+    def __init__(self, width=0, height=0):
+        self.__width = width
+        self.__height = height
 
     def __str__(self):
         """
@@ -150,6 +152,7 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Return a string that can recreate the same Rectangle object using eval().
+        Return a string that can recreate the same Rectangle object
+        using eval().
         """
         return f"Rectangle({self.__width}, {self.__height})"
