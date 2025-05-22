@@ -9,6 +9,7 @@ It also validates that width and height are integers greater
 than or equal to zero.
 """
 
+
 class Rectangle:
     """
     Rectangle class that represents a rectangle defined by its
