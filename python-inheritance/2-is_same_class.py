@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 '''
 usr: This MyList class inherits from the built-in list class.
-It adds a print_sorted method that displays the list elements in ascending order
+It adds a print_sorted method that displays the list elements in
+ascending order
 without modifying the original list.
 '''
+
 
 class Mylis(list):
     def print_sorted(self):
@@ -29,4 +31,3 @@ class Mylis(list):
 
 
 pass
-
