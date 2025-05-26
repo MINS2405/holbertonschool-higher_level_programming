@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 '''
 This function checks if an object is exactly an instance of a specified class.
 It returns True if the object is created directly from that class,
