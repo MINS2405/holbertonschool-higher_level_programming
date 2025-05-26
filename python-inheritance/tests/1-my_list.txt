@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+
+'''
+This script tests the MyList class and its print_sorted() method.
+'''
+
+MyList = __import__('1-my_list').Mylis
+
+'''
+Create an instance of MyList with some unsorted integers.
+'''
+my_list = MyList([5, 3, 9, 1, 4])
+
+'''
+Print the original list (in the order it was created).
+'''
+print(my_list)
+
+'''
+Call print_sorted to print the list sorted in ascending order.
+'''
+my_list.print_sorted()
+
+'''
+Print the original list again to verify it has not been modified.
+'''
+print(my_list)
