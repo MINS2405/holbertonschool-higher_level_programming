@@ -1,29 +1,19 @@
 #!/usr/bin/python3
 '''
-This module defines a function that returns the list of available
-attributes and methods of any given object.
+usr: This MyList class inherits from the built-in list class.
+It adds a print_sorted method that displays the list elements in
+ascending order
+without modifying the original list.
 '''
 
 
-def lookup(obj):
-    '''
-    Returns a list of available attributes and methods of an object.
-
-    Parameters:
-        obj: The object to inspect.
-
-    Returns:
-        A list containing the names of the object's attributes and methods.
-    '''
-    return dir(obj)
-
-
-class Mylis(list):
-    '''
-    MyList is a subclass of the built-in list.
-    It adds a method to print the list sorted in ascending order without
-    modifying the original list.
-    '''
+class MyList(list):
+    def print_sorted(self):
+        '''
+        MyList is a subclass of the built-in list.
+        It adds a method to print the list sorted in ascending order without
+        modifying the original list.
+        '''
 
     def print_sorted(self):
         '''
