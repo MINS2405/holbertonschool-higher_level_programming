@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+'''
+This module defines the BaseGeometry class.
+It provides basic methods for geometric operations and validations.
+The area() method must be implemented by subclasses.
+The integer_validator() method ensures that a value is a positive integer.
+'''
+
 
 class BaseGeometry:
     """Base class for geometric operations and calculations."""
