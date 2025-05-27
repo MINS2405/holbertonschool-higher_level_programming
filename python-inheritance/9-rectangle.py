@@ -2,34 +2,72 @@
 
 
 '''
-Implements a Square class that specializes the Rectangle with equal sides.
+Defines the BaseGeometry class with basic geometric validation methods.
 '''
 
-Rectangle = __import__('8-rectangle').Rectangle
 
-
-class Square(Rectangle):
-    '''A geometric square, inheriting properties from Rectangle.'''
-
-    def __init__(self, size):
-        '''
-        Initialize a Square with a validated size.
-
-        Args:
-            size (int): The length of each side of the square.
-        '''
-
-        self.integer_validator("size", size)
-
-        self.__size = size
-
-        super().__init__(size, size)
+class BaseGeometry:
+    '''
+    BaseGeometry serves as a foundation for geometric shapes.
+    '''
 
     def area(self):
         '''
-        Compute and return the area of the square.
-
-        Returns:
-            int: The area calculated as size squared.
+        Raises an exception to indicate that area() must be implemented
+        by subclasses.
         '''
-        return self.__size ** 2
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        '''
+        Checks if the value is a positive integer.
+
+        Args:
+            name (str): The parameter's name.
+            value (int): The value to be validated.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is not greater than 0.
+        '''
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
+
+
+'''
+Implements the Rectangle class, inheriting from BaseGeometry and adding
+area calculation.
+'''
+
+
+class Rectangle(BaseGeometry):
+    '''
+    Rectangle represents a quadrilateral with opposite sides equal.
+    '''
+
+    def __init__(self, width, height):
+        '''
+        Initializes a Rectangle instance after validating dimensions.
+
+        Args:
+            width (int): The rectangle's width.
+            height (int): The rectangle's height.
+        '''
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
+
+    def area(self):
+        '''
+        Calculates and returns the area of the rectangle.
+        '''
+        return self.__width * self.__height
+
+    def __str__(self):
+        '''
+        Returns a custom string representation of the Rectangle object.
+        '''
+        return f"[Rectangle] {self.__width}/{self.__height}"
