@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+This module defines the BaseGeometry class.
+It provides a base for geometric operations and calculations.
+The area() method is not implemented and must be overridden by subclasses.
+'''
 
 class BaseGeometry:
     """Base class for geometric operations and calculations."""
