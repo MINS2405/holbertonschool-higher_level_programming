@@ -1,43 +1,35 @@
 #!/usr/bin/python3
+
+
 '''
-This module defines the Rectangle class, which inherits from BaseGeometry.
-It validates and stores width and height, computes area, and provides
-a string representation.
+Implements a Square class that specializes the Rectangle with equal sides.
 '''
 
+Rectangle = __import__('8-rectangle').Rectangle
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-class Rectangle(BaseGeometry):
-    def __init__(self, width, height):
+class Square(Rectangle):
+    '''A geometric square, inheriting properties from Rectangle.'''
+
+    def __init__(self, size):
         '''
-        Initialize a new Rectangle instance with width and height.
+        Initialize a Square with a validated size.
+
+        Args:
+            size (int): The length of each side of the square.
         '''
-        self.integer_validator("width", width)
-        '''
-        Validate that width is a positive integer.
-        '''
-        self.integer_validator("height", height)
-        '''
-        Validate that height is a positive integer.
-        '''
-        self.__width = width
-        '''
-        Store width as a private attribute.
-        '''
-        self.__height = height
-        '''
-        Store height as a private attribute.
-        '''
+
+        self.integer_validator("size", size)
+
+        self.__size = size
+
+        super().__init__(size, size)
 
     def area(self):
         '''
-        Compute and return the area of the Rectangle.
-        '''
-        return self.__width * self.__height
+        Compute and return the area of the square.
 
-    def __str__(self):
+        Returns:
+            int: The area calculated as size squared.
         '''
-        Return the string representation of the Rectangle.
-        '''
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        return self.__size ** 2
