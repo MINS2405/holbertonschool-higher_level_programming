@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+'''
+This module defines the Square class, which inherits from Rectangle.
+It validates and stores size, computes area, and provides a
+string representation.
+'''
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
