@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 '''
 This function checks if an object is an instance of a class that inherited
 (directly or indirectly) from the specified class.
@@ -7,6 +8,7 @@ It returns True if the object's class is a subclass of a_class
 (but not a_class itself),
 otherwise returns False.
 '''
+
 
 def inherits_from(obj, a_class):
     """
