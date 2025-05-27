@@ -1,39 +1,34 @@
 #!/usr/bin/python3
-'''
-This module defines the Square class, which inherits from Rectangle.
-It validates and stores size, computes area, and provides a
-string representation.
-'''
 
 
+'''
+Imports the Rectangle class from the previous module for inheritance.
+'''
 Rectangle = __import__('9-rectangle').Rectangle
 
+'''
+Defines the Square class, which is a special case of a Rectangle.
+'''
+
+
 class Square(Rectangle):
+    '''
+    Square represents a geometric figure with four equal sides.
+    '''
+
     def __init__(self, size):
         '''
-        Initialize a new Square instance with size.
+        Initializes a Square instance after validating the size.
+
+        Args:
+            size (int): The length of each side of the square.
         '''
-        self.integer_validator("size", size)
-        '''
-        Validate that size is a positive integer.
-        '''
+        if self.integer_validator('size', size):
+            self.__size = size
         super().__init__(size, size)
-        '''
-        Call parent class constructor with validated size for both width and height.
-        '''
-        self.__size = size
-        '''
-        Store size as a private attribute.
-        '''
 
     def area(self):
         '''
-        Compute and return the area of the Square.
+        Computes and returns the area specific to the Square.
         '''
-        return self.__size ** 2
-
-    def __str__(self):
-        '''
-        Return the string representation of the Square.
-        '''
-        return f"[Square] {self.__size}/{self.__size}"
+        return super().area()
