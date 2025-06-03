@@ -11,5 +11,6 @@ def read_file(filename=""):
     The filename parameter is the name of the file to read.
     '''
 
-    with open('my_file_0.txt', encoding="UTF-8") as f:
-        print(f.read())
+    with open(filename, encoding='utf-8') as file:
+        filenn = file.read()
+        print(filenn, end="")
