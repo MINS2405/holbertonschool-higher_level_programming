@@ -11,5 +11,6 @@ def write_file(filename="", text=""):
     it if it does.
     Returns the number of characters written.
     '''
-    with open('filename', mode="w", encoding="UTF-8") as f:
-        print(f.write(text))
+    with open('filename', mode="w", encoding="UTF-8") as filename:
+        filename = filename.write(text)
+        print(filename, text)
