@@ -5,15 +5,14 @@ then saves them to a file in JSON format.
 '''
 
 import sys
-from os.path import exists
-from 5-save_to_json_file import save_to_json_file
-from 6-load_from_json_file import load_from_json_file
+save_to_json_file = __import__ ('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__ ('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
+try:
+    new_list = load_from_json_file(filename)
+except FileNotFoundError:
+    new_list = []
 
-if exists(filename):
-    items = load_from_json_file(filename)
-else:
-    items = []
-items.extend(sys.argv[1:])
-save_to_json_file(items, filename)
+new_list.extend(sys.argv[1:])
+save_to_json_file(new_list, filename)
