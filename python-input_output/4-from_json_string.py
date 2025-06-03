@@ -6,6 +6,7 @@ into the corresponding Python data structure.
 
 import json
 
+
 def from_json_string(my_str):
     '''
     Returns the Python object represented by a JSON string.
